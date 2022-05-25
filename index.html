@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Megacommerce</title>
+    <!-- BOOTSTRAP -->
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
+        crossorigin="anonymous">
+    <!-- FONTAWESOME -->
+    <link 
+        rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" 
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer">
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&family=Sigmar+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/estilo.css">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <!-- NAVBAR-TOP -->
+        <nav class="navbar navbar-light navbar-lg-celeste">
+            <div class="container-fluid container-xxl justify-content-center">
+                <div class="row w-100 align-items-center">
+                    <div class="col-1 col-xl-3 d-flex justify-content-start p-0 align-items-center">
+                        <input type="checkbox" id="menu-navbar" hidden>
+                        <button class="btn-card-white" type="button" >
+                            <label class="fas fa-bars txt-celeste navbar-label" for="menu-navbar">
+                            </label>
+                        </button>
+                        <h4 class="titulo ms-4 d-none d-xl-block" >
+                            <a class="txt-oscuro link txt-lg-blanco" href="#">MEGACOMMERCE</a>
+                        </h4>
+                        <div class="navbar-items-container">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="#">
+                                        <i class="fas fa-home txt-celeste"></i>
+                                        Inicio
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="#">
+                                        <i class="fas fa-info-circle txt-celeste"></i>
+                                        Información
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <i class="fas fa-map-marker-alt txt-celeste"></i>
+                                        Ubicaciones
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <i class="fas fa-shopping-bag txt-celeste"></i>
+                                        Compras
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="desarrollado-por text-center">
+                                <small class="text-muted d-block" >
+                                    Desarrollado por
+                                </small>
+                                <img src="./assets/img/megadigitallog.png" width="35px" class="py-2">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-none d-xl-flex col-lg-6">
+                        <!-- SECTION BUSCADOR -->
+                        <section class="container-fluid" >
+                            <form action="#">
+                                <div class="d-flex align-items-center" >
+                                    <input type="text" name="buscar" class="form-input me-3" placeholder="Buscar">
+                                    <button class="btn-card-white me-2" type="button">
+                                        <i class="fas fa-search txt-celeste"></i>
+                                    </button>
+                                </div>
+                            </form>
+                        </section>
+                        <!-- / SECTION BUSCADOR -->
+                    </div>
+                    <div class="col-10 text-center d-xl-none">
+                        <h3 class="titulo" >
+                            <a class="txt-oscuro link txt-lg-blanco" href="#">MEGACOMMERCE</a>
+                        </h3>
+                    </div>
+                    <div class="col-1 col-xl-3 d-flex justify-content-end p-0">
+                        <a class="btn-card-white me-2 d-none d-xl-flex" aria-current="page" href="mipedido.html">
+                            <img src="./assets/img/icon-bag-celeste.svg" width="20px">
+                        </a>
+                        <a class="btn-card-white me-2 d-none d-xl-flex" aria-current="page" href="#">
+                            <img src="./assets/img/icon-gift-celeste.svg" width="20px">
+                        </a>
+                        <a class="btn-card-white me-2 d-none d-xl-flex" aria-current="page" href="miperfil.html">
+                            <img src="./assets/img/icon-bell-celeste.svg" width="20px">
+                        </a>
+                        <a class="btn-card-white" aria-current="page" href="miperfil.html">
+                            <i class="fas fa-user txt-celeste"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav><!-- / NAVBAR-TOP -->
+        <!-- NAVBAR-BOTTOM -->
+        <nav class="navbar navbar-bottom-blanco d-xl-none">
+            <div class="container-fluid d-flex justify-content-space-between align-items-center">
+                    <button class="btn-transparent" >
+                        <label class="fas fa-bars txt-celeste navbar-label" for="menu-navbar">
+                        </label>
+                    </button>
+                    <button class="btn-transparent" >
+                        <img src="./assets/img/icon-search-celeste.svg" width="26px">
+                    </button>
+                    <button class="btn-transparent" >
+                        <!-- ESTE BOTÓN ES SOLO PARA NO ROMPER LA FILA -->
+                        <span class="px-4" ></span>
+                    </button>
+                    <a href="mipedido.html" class="btn-card-circulo-celeste" >
+                        <img src="./assets/img/icon-bag-blanco.svg" width="26px">
+                    </a>
+                    <button class="btn-transparent" >
+                        <img src="./assets/img/icon-gift-celeste.svg" width="26px">
+                    </button>
+                    <button class="btn-transparent" >
+                        <img src="./assets/img/icon-bell-celeste.svg" width="26px">
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <!-- / NAVBAR-BOTTOM -->
+        <!-- SECTION BUSCADOR -->
+        <section class="container-fluid seccion-buscador d-xl-none" >
+            <form action="#">
+                <div class="d-flex" >
+                    <input type="text" name="buscar" class="form-input me-3" placeholder="Buscar">
+                    <button class="btn-card-white me-2" type="button">
+                        <i class="fas fa-search txt-celeste"></i>
+                    </button>
+                    <button id="btn-filtro-movil" class="btn-card-white" type="button">
+                        <img src="./assets/img/icon-options-celeste.svg" alt="" width="25px">
+                    </button>
+                </div>
+                <div id="panel-filtro-movil" class="card card-filtro mt-2 d-none">
+                    <div class="card-header">
+                        <h5 class="titulo txt-oscuro" >
+                            <img src="./assets/img/icon-options-celeste.svg" class="me-2" width="20px">
+                            Filtrar Por
+                        </h5>
+                    </div>
+                    <div class="card-body pt-0">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h6 class="titulo txt-oscuro" >Categorías</h6>
+                                    <i class="fas fa-chevron-up txt-celeste"></i>
+                                </div>
+                                <ul class="filtro-listado mt-2" >
+                                    <li>
+                                        <a href="#" class="link txt-oscuro">
+                                            Bebidas
+                                        </a> 
+                                    </li>
+                                    <li>
+                                        <a href="#" class="link txt-oscuro">
+                                            Carnicería
+                                        </a> 
+                                    </li>
+                                    <li>
+                                        <a href="#" class="link txt-oscuro">
+                                            Limpieza
+                                        </a> 
+                                    </li>
+                                    <li>
+                                        <a href="#" class="link txt-oscuro">
+                                            Verdulería
+                                        </a> 
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h6 class="titulo txt-oscuro" >Precio Gs</h6>
+                                    <i class="fas fa-chevron-up txt-celeste"></i>
+                                </div>
+                                <div>
+                                    <div class="container mt-2 text-center">
+                                        <div class="price-slider">
+                                            <div class="d-flex justify-content-between" >
+                                                <input class="rango-precio txt-oscuro" type="number" value="0" min="0" max="120000">
+                                                <input class="rango-precio txt-oscuro text-end" type="number" value="120000" min="0" max="120000">
+                                            </div>
+                                            <input value="0" min="0" max="120000" step="500" type="range">
+                                            <input value="120000" min="0" max="120000" step="500" type="range">
+                                        </div>
+                                        <button class="btn-celeste-filtro mt-3" >Aceptar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h6 class="titulo txt-oscuro" >Marcas</h6>
+                                    <i class="fas fa-chevron-up txt-celeste"></i>
+                                </div>
+                                <ul class="filtro-listado mt-2" >
+                                    <li>
+                                        <a href="#" class="link txt-oscuro">
+                                            Marca 1
+                                        </a> 
+                                    </li>
+                                    <li>
+                                        <a href="#" class="link txt-oscuro">
+                                            Marca 2
+                                        </a> 
+                                    </li>
+                                    <li>
+                                        <a href="#" class="link txt-oscuro">
+                                            Marca 3
+                                        </a> 
+                                    </li>
+                                    <li>
+                                        <a href="#" class="link txt-oscuro">
+                                            Marca 4
+                                        </a> 
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </section>
+        <!-- / SECTION BUSCADOR -->
+    </header>
+    <!-- / HEADER -->
+    <main>
+        <!-- PROMOCIONES -->
+        <section class="container-fluid container-xxl seccion-promociones" >
+            <div class="row mt-4 mb-3">
+                <div class="col-12">
+                    <h5 class="txt-oscuro titulo titulo-xl" >Promociones</h5>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-12">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button 
+                                type="button" 
+                                data-bs-target="#carouselExampleIndicators" 
+                                data-bs-slide-to="0" 
+                                class="active" aria-current="true" aria-label="Slide 1">
+                            </button>
+                            <button 
+                                type="button" 
+                                data-bs-target="#carouselExampleIndicators" 
+                                data-bs-slide-to="1" 
+                                aria-label="Slide 2">
+                            </button>
+                            <button 
+                                type="button" 
+                                data-bs-target="#carouselExampleIndicators" 
+                                data-bs-slide-to="2" 
+                                aria-label="Slide 3">
+                            </button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <a href="promociones.html">
+                                    <img src="./assets/img/img-promocion.jpg" class="d-block w-100">
+                                </a>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="promociones.html">
+                                    <img src="./assets/img/img-supersale.jpg" class="d-block w-100">
+                                </a>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- / PROMOCIONES -->
+        <!-- CATEGORÍAS -->
+        <section class="container-fluid container-xxl mt-xl-5" >
+            <div class="row mt-3 mb-3">
+                <div class="col-12">
+                    <h5 class="txt-oscuro titulo titulo-xl" >
+                        Categorías
+                    </h5>
+                </div>
+            </div>
+            <div class="row mt-2 mt-xl-0">
+                <div class="col-6 d-flex align-items-center flex-column col-sm-4 mt-sm-4 col-xl-2 mt-xl-1">
+                    <a href="#" class="link">
+                        <div class="card card-categoria">
+                            <div class="card-body">
+                                <img src="./assets/img/ctg-bebidas.png">
+                            </div>
+                            <div class="card-footer" style="background-color: #26B7BB;">
+                                Bebidas
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-6 d-flex align-items-center flex-column col-sm-4 mt-sm-4 col-xl-2 mt-xl-1">
+                    <div class="card card-categoria">
+                        <a href="productos.html" class="link">
+                            <div class="card-body">
+                                <img src="./assets/img/ctg-carniceria.png">
+                            </div>
+                            <div class="card-footer" style="background-color: #CE484D;">
+                                Carnicería
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-6 d-flex align-items-center flex-column mt-4 col-sm-4 mt-sm-4 col-xl-2 mt-xl-1">
+                    <div class="card card-categoria">
+                        <a href="#" class="link">
+                            <div class="card-body">
+                                <img src="./assets/img/ctg-bebidas.png">
+                            </div>
+                            <div class="card-footer" style="background-color: #2684BB;">
+                                Limpieza
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-6 d-flex align-items-center flex-column mt-4 col-sm-4 mt-sm-4 col-xl-2 mt-xl-1">
+                    <div class="card card-categoria">
+                        <a href="#" class="link">
+                            <div class="card-body">
+                                <img src="./assets/img/ctg-bebidas.png">
+                            </div>
+                            <div class="card-footer" style="background-color: #26BB44;">
+                                Verdulería
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-6 d-flex align-items-center flex-column mt-4 col-sm-4 mt-sm-4 col-xl-2 mt-xl-1">
+                    <div class="card card-categoria">
+                        <a href="#" class="link">
+                            <div class="card-body">
+                                <img src="./assets/img/ctg-bebidas.png">
+                            </div>
+                            <div class="card-footer" style="background-color: #E28D1F;">
+                                Panadería
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-6 d-flex align-items-center flex-column mt-4 col-sm-4 mt-sm-4 col-xl-2 mt-xl-1">
+                    <div class="card card-categoria">
+                        <a href="#" class="link">
+                            <div class="card-body">
+                                <img src="./assets/img/ctg-bebidas.png">
+                            </div>
+                            <div class="card-footer" style="background-color: #EBCC31;">
+                                Mascotas
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- / CATEGORÍAS -->
+        <!-- CARUSEL CATEGORÍAS -->
+        <section class="d-none d-xl-block container-fluid container-xxl mt-xl-5">
+            <div class="row mt-3 mb-3">
+                <div class="col-12">
+                    <h5 class="titulo titulo-xl" style="color: #26B7BB;" >
+                        Bebidas
+                    </h5>
+                </div>
+            </div>
+            <div class="row mt-2 mt-xl-0">
+                <div id="categoria-bebidas" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <!-- LISTADO PRODUCTO -->
+                            <div class="row justify-content-evenly px-5">
+                                <div class="col-12 col-lg-6 col-xl-2 p-xl-2">
+                                    <div class="card card-producto mt-3 mt-xl-0">
+                                        <img src="./assets/img/oferta.png" class="card-producto-oferta" width="80px">
+                                        <div class="row h-100">
+                                            <div class="col-4 col-xl-12 col-imagen-producto">
+                                                <a href="producto.html">
+                                                    <img class="img-producto" src="./assets/img/logo-test.png" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="col-8 col-xl-12 mt-xl-2">
+                                                <div class="row text-xl-center">
+                                                    <div class="col-12">
+                                                        <a href="producto.html" class="link">
+                                                            <h5 class="txt-celeste mt-2" >Gs 110.000</h5>
+                                                            <p class="txt-oscuro p-0 card-producto-nombre" >
+                                                                Skol Vodka 100 Proof
+                                                            </p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6 col-xl-12 d-flex pe-0 align-items-center pe-xl-2">
+                                                        <img 
+                                                            src="./assets/img/icon-minus-celeste.svg" 
+                                                            width="50px"
+                                                            class="btn-minus-plus">
+                                                        <input 
+                                                            type="number" 
+                                                            class="form-input-minus-plus mx-2 text-center" 
+                                                            value="1">
+                                                        <img 
+                                                            src="./assets/img/icon-plus-celeste.svg" 
+                                                            width="50px"
+                                                            class="btn-minus-plus">
+                                                    </div>
+                                                    <div class="col-6 col-xl-12 text-center d-flex mt-xl-3 justify-content-xl-center">
+                                                        <button class="btn-celeste" >
+                                                            <i class="fas fa-shopping-cart"></i>
+                                                            Agregar
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-6 col-xl-2 p-xl-2">
+                                    <div class="card card-producto mt-3 mt-xl-0">
+                                        <img src="./assets/img/oferta.png" class="card-producto-oferta" width="80px">
+                                        <div class="row h-100">
+                                            <div class="col-4 col-xl-12 col-imagen-producto">
+                                                <a href="producto.html">
+                                                    <img class="img-producto" src="./assets/img/cheese.png" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="col-8 col-xl-12 mt-xl-2">
+                                                <div class="row text-xl-center">
+                                                    <div class="col-12">
+                                                        <a href="producto.html" class="link">
+                                                            <h5 class="txt-celeste mt-2" >Gs 110.000</h5>
+                                                            <p class="txt-oscuro p-0 card-producto-nombre" >
+                                                                Skol Vodka 100 Proof
+                                                            </p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6 col-xl-12 d-flex pe-0 align-items-center pe-xl-2">
+                                                        <img 
+                                                            src="./assets/img/icon-minus-celeste.svg" 
+                                                            width="50px"
+                                                            class="btn-minus-plus">
+                                                        <input 
+                                                            type="number" 
+                                                            class="form-input-minus-plus mx-2 text-center" 
+                                                            value="1">
+                                                        <img 
+                                                            src="./assets/img/icon-plus-celeste.svg" 
+                                                            width="50px"
+                                                            class="btn-minus-plus">
+                                                    </div>
+                                                    <div class="col-6 col-xl-12 text-center d-flex mt-xl-3 justify-content-xl-center">
+                                                        <button class="btn-celeste" >
+                                                            <i class="fas fa-shopping-cart"></i>
+                                                            Agregar
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-6 col-xl-2 p-xl-2">
+                                    <div class="card card-producto mt-3 mt-xl-0 card-producto-agregado">
+                                        <img src="./assets/img/oferta.png" class="card-producto-oferta" width="80px">
+                                        <div class="row h-100">
+                                            <div class="col-4 col-xl-12 col-imagen-producto">
+                                                <a href="producto.html">
+                                                    <img class="img-producto" src="./assets/img/american-1239081_960_720.jpg">
+                                                </a>
+                                            </div>
+                                            <div class="col-8 col-xl-12 mt-xl-2">
+                                                <div class="row text-xl-center">
+                                                    <div class="col-12">
+                                                        <a href="producto.html" class="link">
+                                                            <h5 class="txt-celeste mt-2" >Gs 110.000</h5>
+                                                            <p class="txt-oscuro p-0 card-producto-nombre" >
+                                                                Skol Vodka 100 Proof
+                                                            </p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-12 text-center d-flex mt-xl-3 justify-content-xl-center">
+                                                        <button class="btn-verde" >
+                                                            <i class="fas fa-shopping-cart"></i>
+                                                            Agregado
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-6 col-xl-2 p-xl-2">
+                                    <div class="card card-producto mt-3 mt-xl-0">
+                                        <img src="./assets/img/oferta.png" class="card-producto-oferta" width="80px">
+                                        <div class="row h-100">
+                                            <div class="col-4 col-xl-12 col-imagen-producto">
+                                                <a href="producto.html">
+                                                    <img class="img-producto" src="./assets/img/logo-test.png" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="col-8 col-xl-12 mt-xl-2">
+                                                <div class="row text-xl-center">
+                                                    <div class="col-12">
+                                                        <a href="producto.html" class="link">
+                                                            <h5 class="txt-celeste mt-2" >Gs 110.000</h5>
+                                                            <p class="txt-oscuro p-0 card-producto-nombre" >
+                                                                Skol Vodka 100 Proof
+                                                            </p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6 col-xl-12 d-flex pe-0 align-items-center pe-xl-2">
+                                                        <img 
+                                                            src="./assets/img/icon-minus-celeste.svg" 
+                                                            width="50px"
+                                                            class="btn-minus-plus">
+                                                        <input 
+                                                            type="number" 
+                                                            class="form-input-minus-plus mx-2 text-center" 
+                                                            value="1">
+                                                        <img 
+                                                            src="./assets/img/icon-plus-celeste.svg" 
+                                                            width="50px"
+                                                            class="btn-minus-plus">
+                                                    </div>
+                                                    <div class="col-6 col-xl-12 text-center d-flex mt-xl-3 justify-content-xl-center">
+                                                        <button class="btn-celeste" >
+                                                            <i class="fas fa-shopping-cart"></i>
+                                                            Agregar
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- / LISTADO PRODUCTO -->
+                        </div>
+                        <div class="carousel-item">
+                            <!-- LISTADO PRODUCTO -->
+                            <div class="row justify-content-evenly px-5">
+                                <div class="col-12 col-lg-6 col-xl-2 p-xl-2">
+                                    <div class="card card-producto mt-3 mt-xl-0">
+                                        <img src="./assets/img/oferta.png" class="card-producto-oferta" width="80px">
+                                        <div class="row h-100">
+                                            <div class="col-4 col-xl-12 col-imagen-producto">
+                                                <a href="producto.html">
+                                                    <img class="img-producto" src="./assets/img/logo-test.png" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="col-8 col-xl-12 mt-xl-2">
+                                                <div class="row text-xl-center">
+                                                    <div class="col-12">
+                                                        <a href="producto.html" class="link">
+                                                            <h5 class="txt-celeste mt-2" >Gs 110.000</h5>
+                                                            <p class="txt-oscuro p-0 card-producto-nombre" >
+                                                                Skol Vodka 100 Proof
+                                                            </p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6 col-xl-12 d-flex pe-0 align-items-center pe-xl-2">
+                                                        <img 
+                                                            src="./assets/img/icon-minus-celeste.svg" 
+                                                            width="50px"
+                                                            class="btn-minus-plus">
+                                                        <input 
+                                                            type="number" 
+                                                            class="form-input-minus-plus mx-2 text-center" 
+                                                            value="1">
+                                                        <img 
+                                                            src="./assets/img/icon-plus-celeste.svg" 
+                                                            width="50px"
+                                                            class="btn-minus-plus">
+                                                    </div>
+                                                    <div class="col-6 col-xl-12 text-center d-flex mt-xl-3 justify-content-xl-center">
+                                                        <button class="btn-celeste" >
+                                                            <i class="fas fa-shopping-cart"></i>
+                                                            Agregar
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-6 col-xl-2 p-xl-2">
+                                    <div class="card card-producto mt-3 mt-xl-0">
+                                        <img src="./assets/img/oferta.png" class="card-producto-oferta" width="80px">
+                                        <div class="row h-100">
+                                            <div class="col-4 col-xl-12 col-imagen-producto">
+                                                <a href="producto.html">
+                                                    <img class="img-producto" src="./assets/img/cheese.png" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="col-8 col-xl-12 mt-xl-2">
+                                                <div class="row text-xl-center">
+                                                    <div class="col-12">
+                                                        <a href="producto.html" class="link">
+                                                            <h5 class="txt-celeste mt-2" >Gs 110.000</h5>
+                                                            <p class="txt-oscuro p-0 card-producto-nombre" >
+                                                                Skol Vodka 100 Proof
+                                                            </p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6 col-xl-12 d-flex pe-0 align-items-center pe-xl-2">
+                                                        <img 
+                                                            src="./assets/img/icon-minus-celeste.svg" 
+                                                            width="50px"
+                                                            class="btn-minus-plus">
+                                                        <input 
+                                                            type="number" 
+                                                            class="form-input-minus-plus mx-2 text-center" 
+                                                            value="1">
+                                                        <img 
+                                                            src="./assets/img/icon-plus-celeste.svg" 
+                                                            width="50px"
+                                                            class="btn-minus-plus">
+                                                    </div>
+                                                    <div class="col-6 col-xl-12 text-center d-flex mt-xl-3 justify-content-xl-center">
+                                                        <button class="btn-celeste" >
+                                                            <i class="fas fa-shopping-cart"></i>
+                                                            Agregar
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-6 col-xl-2 p-xl-2">
+                                    <div class="card card-producto mt-3 mt-xl-0 card-producto-agregado">
+                                        <img src="./assets/img/oferta.png" class="card-producto-oferta" width="80px">
+                                        <div class="row h-100">
+                                            <div class="col-4 col-xl-12 col-imagen-producto">
+                                                <a href="producto.html">
+                                                    <img class="img-producto" src="./assets/img/american-1239081_960_720.jpg">
+                                                </a>
+                                            </div>
+                                            <div class="col-8 col-xl-12 mt-xl-2">
+                                                <div class="row text-xl-center">
+                                                    <div class="col-12">
+                                                        <a href="producto.html" class="link">
+                                                            <h5 class="txt-celeste mt-2" >Gs 110.000</h5>
+                                                            <p class="txt-oscuro p-0 card-producto-nombre" >
+                                                                Skol Vodka 100 Proof
+                                                            </p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-12 text-center d-flex mt-xl-3 justify-content-xl-center">
+                                                        <button class="btn-verde" >
+                                                            <i class="fas fa-shopping-cart"></i>
+                                                            Agregado
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-6 col-xl-2 p-xl-2">
+                                    <div class="card card-producto mt-3 mt-xl-0">
+                                        <img src="./assets/img/oferta.png" class="card-producto-oferta" width="80px">
+                                        <div class="row h-100">
+                                            <div class="col-4 col-xl-12 col-imagen-producto">
+                                                <a href="producto.html">
+                                                    <img class="img-producto" src="./assets/img/logo-test.png" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="col-8 col-xl-12 mt-xl-2">
+                                                <div class="row text-xl-center">
+                                                    <div class="col-12">
+                                                        <a href="producto.html" class="link">
+                                                            <h5 class="txt-celeste mt-2" >Gs 110.000</h5>
+                                                            <p class="txt-oscuro p-0 card-producto-nombre" >
+                                                                Skol Vodka 100 Proof
+                                                            </p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6 col-xl-12 d-flex pe-0 align-items-center pe-xl-2">
+                                                        <img 
+                                                            src="./assets/img/icon-minus-celeste.svg" 
+                                                            width="50px"
+                                                            class="btn-minus-plus">
+                                                        <input 
+                                                            type="number" 
+                                                            class="form-input-minus-plus mx-2 text-center" 
+                                                            value="1">
+                                                        <img 
+                                                            src="./assets/img/icon-plus-celeste.svg" 
+                                                            width="50px"
+                                                            class="btn-minus-plus">
+                                                    </div>
+                                                    <div class="col-6 col-xl-12 text-center d-flex mt-xl-3 justify-content-xl-center">
+                                                        <button class="btn-celeste" >
+                                                            <i class="fas fa-shopping-cart"></i>
+                                                            Agregar
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- / LISTADO PRODUCTO -->
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#categoria-bebidas" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#categoria-bebidas" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <div class="row mt-3 mb-3">
+                <div class="col-12">
+                    <h5 class="titulo titulo-xl" style="color: #CE484D;" >
+                        Carnicería
+                    </h5>
+                </div>
+            </div>
+            <div class="row mt-2 mt-xl-0">
+                <div id="categoria-bebidas" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <!-- LISTADO PRODUCTO -->
+                            <div class="row justify-content-evenly px-5">
+                                <div class="col-12 col-lg-6 col-xl-2 p-xl-2">
+                                    <div class="card card-producto mt-3 mt-xl-0">
+                                        <img src="./assets/img/oferta.png" class="card-producto-oferta" width="80px">
+                                        <div class="row h-100">
+                                            <div class="col-4 col-xl-12 col-imagen-producto">
+                                                <a href="producto.html">
+                                                    <img class="img-producto" src="./assets/img/logo-test.png" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="col-8 col-xl-12 mt-xl-2">
+                                                <div class="row text-xl-center">
+                                                    <div class="col-12">
+                                                        <a href="producto.html" class="link">
+                                                            <h5 class="txt-celeste mt-2" >Gs 110.000</h5>
+                                                            <p class="txt-oscuro p-0 card-producto-nombre" >
+                                                                Skol Vodka 100 Proof
+                                                            </p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6 col-xl-12 d-flex pe-0 align-items-center pe-xl-2">
+                                                        <img 
+                                                            src="./assets/img/icon-minus-celeste.svg" 
+                                                            width="50px"
+                                                            class="btn-minus-plus">
+                                                        <input 
+                                                            type="number" 
+                                                            class="form-input-minus-plus mx-2 text-center" 
+                                                            value="1">
+                                                        <img 
+                                                            src="./assets/img/icon-plus-celeste.svg" 
+                                                            width="50px"
+                                                            class="btn-minus-plus">
+                                                    </div>
+                                                    <div class="col-6 col-xl-12 text-center d-flex mt-xl-3 justify-content-xl-center">
+                                                        <button class="btn-celeste" >
+                                                            <i class="fas fa-shopping-cart"></i>
+                                                            Agregar
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-6 col-xl-2 p-xl-2">
+                                    <div class="card card-producto mt-3 mt-xl-0">
+                                        <img src="./assets/img/oferta.png" class="card-producto-oferta" width="80px">
+                                        <div class="row h-100">
+                                            <div class="col-4 col-xl-12 col-imagen-producto">
+                                                <a href="producto.html">
+                                                    <img class="img-producto" src="./assets/img/cheese.png" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="col-8 col-xl-12 mt-xl-2">
+                                                <div class="row text-xl-center">
+                                                    <div class="col-12">
+                                                        <a href="producto.html" class="link">
+                                                            <h5 class="txt-celeste mt-2" >Gs 110.000</h5>
+                                                            <p class="txt-oscuro p-0 card-producto-nombre" >
+                                                                Skol Vodka 100 Proof
+                                                            </p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6 col-xl-12 d-flex pe-0 align-items-center pe-xl-2">
+                                                        <img 
+                                                            src="./assets/img/icon-minus-celeste.svg" 
+                                                            width="50px"
+                                                            class="btn-minus-plus">
+                                                        <input 
+                                                            type="number" 
+                                                            class="form-input-minus-plus mx-2 text-center" 
+                                                            value="1">
+                                                        <img 
+                                                            src="./assets/img/icon-plus-celeste.svg" 
+                                                            width="50px"
+                                                            class="btn-minus-plus">
+                                                    </div>
+                                                    <div class="col-6 col-xl-12 text-center d-flex mt-xl-3 justify-content-xl-center">
+                                                        <button class="btn-celeste" >
+                                                            <i class="fas fa-shopping-cart"></i>
+                                                            Agregar
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-6 col-xl-2 p-xl-2">
+                                    <div class="card card-producto mt-3 mt-xl-0 card-producto-agregado">
+                                        <img src="./assets/img/oferta.png" class="card-producto-oferta" width="80px">
+                                        <div class="row h-100">
+                                            <div class="col-4 col-xl-12 col-imagen-producto">
+                                                <a href="producto.html">
+                                                    <img class="img-producto" src="./assets/img/american-1239081_960_720.jpg">
+                                                </a>
+                                            </div>
+                                            <div class="col-8 col-xl-12 mt-xl-2">
+                                                <div class="row text-xl-center">
+                                                    <div class="col-12">
+                                                        <a href="producto.html" class="link">
+                                                            <h5 class="txt-celeste mt-2" >Gs 110.000</h5>
+                                                            <p class="txt-oscuro p-0 card-producto-nombre" >
+                                                                Skol Vodka 100 Proof
+                                                            </p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-12 text-center d-flex mt-xl-3 justify-content-xl-center">
+                                                        <button class="btn-verde" >
+                                                            <i class="fas fa-shopping-cart"></i>
+                                                            Agregado
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-6 col-xl-2 p-xl-2">
+                                    <div class="card card-producto mt-3 mt-xl-0">
+                                        <img src="./assets/img/oferta.png" class="card-producto-oferta" width="80px">
+                                        <div class="row h-100">
+                                            <div class="col-4 col-xl-12 col-imagen-producto">
+                                                <a href="producto.html">
+                                                    <img class="img-producto" src="./assets/img/logo-test.png" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="col-8 col-xl-12 mt-xl-2">
+                                                <div class="row text-xl-center">
+                                                    <div class="col-12">
+                                                        <a href="producto.html" class="link">
+                                                            <h5 class="txt-celeste mt-2" >Gs 110.000</h5>
+                                                            <p class="txt-oscuro p-0 card-producto-nombre" >
+                                                                Skol Vodka 100 Proof
+                                                            </p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6 col-xl-12 d-flex pe-0 align-items-center pe-xl-2">
+                                                        <img 
+                                                            src="./assets/img/icon-minus-celeste.svg" 
+                                                            width="50px"
+                                                            class="btn-minus-plus">
+                                                        <input 
+                                                            type="number" 
+                                                            class="form-input-minus-plus mx-2 text-center" 
+                                                            value="1">
+                                                        <img 
+                                                            src="./assets/img/icon-plus-celeste.svg" 
+                                                            width="50px"
+                                                            class="btn-minus-plus">
+                                                    </div>
+                                                    <div class="col-6 col-xl-12 text-center d-flex mt-xl-3 justify-content-xl-center">
+                                                        <button class="btn-celeste" >
+                                                            <i class="fas fa-shopping-cart"></i>
+                                                            Agregar
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- / LISTADO PRODUCTO -->
+                        </div>
+                        <div class="carousel-item">
+                            <!-- LISTADO PRODUCTO -->
+                            <div class="row justify-content-evenly px-5">
+                                <div class="col-12 col-lg-6 col-xl-2 p-xl-2">
+                                    <div class="card card-producto mt-3 mt-xl-0">
+                                        <img src="./assets/img/oferta.png" class="card-producto-oferta" width="80px">
+                                        <div class="row h-100">
+                                            <div class="col-4 col-xl-12 col-imagen-producto">
+                                                <a href="producto.html">
+                                                    <img class="img-producto" src="./assets/img/logo-test.png" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="col-8 col-xl-12 mt-xl-2">
+                                                <div class="row text-xl-center">
+                                                    <div class="col-12">
+                                                        <a href="producto.html" class="link">
+                                                            <h5 class="txt-celeste mt-2" >Gs 110.000</h5>
+                                                            <p class="txt-oscuro p-0 card-producto-nombre" >
+                                                                Skol Vodka 100 Proof
+                                                            </p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6 col-xl-12 d-flex pe-0 align-items-center pe-xl-2">
+                                                        <img 
+                                                            src="./assets/img/icon-minus-celeste.svg" 
+                                                            width="50px"
+                                                            class="btn-minus-plus">
+                                                        <input 
+                                                            type="number" 
+                                                            class="form-input-minus-plus mx-2 text-center" 
+                                                            value="1">
+                                                        <img 
+                                                            src="./assets/img/icon-plus-celeste.svg" 
+                                                            width="50px"
+                                                            class="btn-minus-plus">
+                                                    </div>
+                                                    <div class="col-6 col-xl-12 text-center d-flex mt-xl-3 justify-content-xl-center">
+                                                        <button class="btn-celeste" >
+                                                            <i class="fas fa-shopping-cart"></i>
+                                                            Agregar
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-6 col-xl-2 p-xl-2">
+                                    <div class="card card-producto mt-3 mt-xl-0">
+                                        <img src="./assets/img/oferta.png" class="card-producto-oferta" width="80px">
+                                        <div class="row h-100">
+                                            <div class="col-4 col-xl-12 col-imagen-producto">
+                                                <a href="producto.html">
+                                                    <img class="img-producto" src="./assets/img/cheese.png" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="col-8 col-xl-12 mt-xl-2">
+                                                <div class="row text-xl-center">
+                                                    <div class="col-12">
+                                                        <a href="producto.html" class="link">
+                                                            <h5 class="txt-celeste mt-2" >Gs 110.000</h5>
+                                                            <p class="txt-oscuro p-0 card-producto-nombre" >
+                                                                Skol Vodka 100 Proof
+                                                            </p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6 col-xl-12 d-flex pe-0 align-items-center pe-xl-2">
+                                                        <img 
+                                                            src="./assets/img/icon-minus-celeste.svg" 
+                                                            width="50px"
+                                                            class="btn-minus-plus">
+                                                        <input 
+                                                            type="number" 
+                                                            class="form-input-minus-plus mx-2 text-center" 
+                                                            value="1">
+                                                        <img 
+                                                            src="./assets/img/icon-plus-celeste.svg" 
+                                                            width="50px"
+                                                            class="btn-minus-plus">
+                                                    </div>
+                                                    <div class="col-6 col-xl-12 text-center d-flex mt-xl-3 justify-content-xl-center">
+                                                        <button class="btn-celeste" >
+                                                            <i class="fas fa-shopping-cart"></i>
+                                                            Agregar
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-6 col-xl-2 p-xl-2">
+                                    <div class="card card-producto mt-3 mt-xl-0 card-producto-agregado">
+                                        <img src="./assets/img/oferta.png" class="card-producto-oferta" width="80px">
+                                        <div class="row h-100">
+                                            <div class="col-4 col-xl-12 col-imagen-producto">
+                                                <a href="producto.html">
+                                                    <img class="img-producto" src="./assets/img/american-1239081_960_720.jpg">
+                                                </a>
+                                            </div>
+                                            <div class="col-8 col-xl-12 mt-xl-2">
+                                                <div class="row text-xl-center">
+                                                    <div class="col-12">
+                                                        <a href="producto.html" class="link">
+                                                            <h5 class="txt-celeste mt-2" >Gs 110.000</h5>
+                                                            <p class="txt-oscuro p-0 card-producto-nombre" >
+                                                                Skol Vodka 100 Proof
+                                                            </p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-12 text-center d-flex mt-xl-3 justify-content-xl-center">
+                                                        <button class="btn-verde" >
+                                                            <i class="fas fa-shopping-cart"></i>
+                                                            Agregado
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-6 col-xl-2 p-xl-2">
+                                    <div class="card card-producto mt-3 mt-xl-0">
+                                        <img src="./assets/img/oferta.png" class="card-producto-oferta" width="80px">
+                                        <div class="row h-100">
+                                            <div class="col-4 col-xl-12 col-imagen-producto">
+                                                <a href="producto.html">
+                                                    <img class="img-producto" src="./assets/img/logo-test.png" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="col-8 col-xl-12 mt-xl-2">
+                                                <div class="row text-xl-center">
+                                                    <div class="col-12">
+                                                        <a href="producto.html" class="link">
+                                                            <h5 class="txt-celeste mt-2" >Gs 110.000</h5>
+                                                            <p class="txt-oscuro p-0 card-producto-nombre" >
+                                                                Skol Vodka 100 Proof
+                                                            </p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6 col-xl-12 d-flex pe-0 align-items-center pe-xl-2">
+                                                        <img 
+                                                            src="./assets/img/icon-minus-celeste.svg" 
+                                                            width="50px"
+                                                            class="btn-minus-plus">
+                                                        <input 
+                                                            type="number" 
+                                                            class="form-input-minus-plus mx-2 text-center" 
+                                                            value="1">
+                                                        <img 
+                                                            src="./assets/img/icon-plus-celeste.svg" 
+                                                            width="50px"
+                                                            class="btn-minus-plus">
+                                                    </div>
+                                                    <div class="col-6 col-xl-12 text-center d-flex mt-xl-3 justify-content-xl-center">
+                                                        <button class="btn-celeste" >
+                                                            <i class="fas fa-shopping-cart"></i>
+                                                            Agregar
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- / LISTADO PRODUCTO -->
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#categoria-bebidas" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#categoria-bebidas" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- / CARUSEL CATEGORÍAS -->
+    </main>
+    <footer class="footer mt-5 py-5">
+        <section class="container-fluid container-xxl" >
+            <div class="row" style="--bs-gutter-x: 0;">
+                <div class="col-12 text-center my-4 col-md-6 col-lg-4 col-xl-3 text-xl-start">
+                    <div class="redes-sociales">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                    <div class="logo">
+                        <img src="./assets/img/logo-test.png">
+                    </div>
+                </div>
+                <div class="col-12 d-flex flex-column align-items-center my-4 col-md-6 col-lg-4 col-xl-3">
+                    <h5 class="titulo txt-oscuro" >Navegación</h5>
+                    <ul class="footer-listado mt-2" >
+                        <li>
+                            <a href="#" class="link txt-oscuro">
+                                <i class="fas fa-chevron-right txt-celeste"></i> Inicio
+                            </a> 
+                        </li>
+                        <li>
+                            <a href="#" class="link txt-oscuro">
+                                <i class="fas fa-chevron-right txt-celeste"></i> Información
+                            </a> 
+                        </li>
+                        <li>
+                            <a href="#" class="link txt-oscuro">
+                                <i class="fas fa-chevron-right txt-celeste"></i> Ubicaciones
+                            </a> 
+                        </li>
+                        <li>
+                            <a href="#" class="link txt-oscuro">
+                                <i class="fas fa-chevron-right txt-celeste"></i> Compras
+                            </a> 
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 d-flex flex-column align-items-center my-4 col-md-6 col-lg-4 col-xl-3">
+                    <h5 class="titulo txt-oscuro" >Categorías</h5>
+                    <ul class="footer-listado mt-2" >
+                        <li>
+                            <a href="#" class="link txt-oscuro">
+                                <i class="fas fa-chevron-right txt-celeste"></i> Bebidas
+                            </a> 
+                        </li>
+                        <li>
+                            <a href="#" class="link txt-oscuro">
+                                <i class="fas fa-chevron-right txt-celeste"></i> Carnicería
+                            </a> 
+                        </li>
+                        <li>
+                            <a href="#" class="link txt-oscuro">
+                                <i class="fas fa-chevron-right txt-celeste"></i> Limpieza
+                            </a> 
+                        </li>
+                        <li>
+                            <a href="#" class="link txt-oscuro">
+                                <i class="fas fa-chevron-right txt-celeste"></i> Verdulería
+                            </a> 
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 d-flex flex-column align-items-center my-4 col-md-6 col-lg-12  col-xl-3">
+                    <h5 class="titulo txt-oscuro" >Sucursales</h5>
+                    <ul class="footer-listado mt-2 text-center" >
+                        <li>
+                            <a href="#" class="link txt-oscuro">
+                                Santísima Trinidad Esq. Ramón Zubizarreta
+                            </a> 
+                        </li>
+                        <li>
+                            <a href="#" class="link txt-oscuro">
+                                Denis Róa esquina Dr. Andrade
+                            </a> 
+                        </li>
+                        <li>
+                            <a href="#" class="link txt-oscuro">
+                                Eusebio Ayala esq. Mecánicos de Aviación
+                            </a> 
+                        </li>
+                    </ul>
+                    <div class="row w-100">
+                        <div class="col-6 txt-celeste text-end">
+                            <b><small> Lunes a Viernes</small></b>
+                        </div>
+                        <div class="col-6 txt-oscuro text-start">
+                            <b> <small> 08:30 am - 20:00 pm </small></b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <script 
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
+        crossorigin="anonymous">
+    </script>
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
